@@ -1,27 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Crop Disease Detector</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    video, canvas {
+      max-width: 300px;
+      margin: 10px auto;
+      display: block;
+    }
+    input, button {
+      font-size: 18px;
+      padding: 10px;
+      margin: 10px;
+    }
+  </style>
 </head>
 <body>
   <h1>🌾 Crop Disease Detector</h1>
 
-<input 
-  type="file"
-  id="picture"
-  name="picture"
-  accept="image/*"
-  capture="environment"
-  style="font-size:20px; padding:10px;" />
- 
-  <br><br>
-  <button onclick="predict()">Detect Disease</button>
+  <h3>Option 1: Take photo or pick from gallery</h3>
+  <input type="file" id="picture" accept="image/*" capture="environment" onchange="predictFile(event)" />
+
+  <h3>Option 2: Use live camera</h3>
+  <button onclick="startCamera()">📸 Start Camera</button>
+  <video id="camera" autoplay playsinline></video>
+  <button id="captureBtn" onclick="capture()" style="display:none;">Capture & Predict</button>
 
   <h3 id="result">Result will appear here 🧪</h3>
 
   <!-- TensorFlow.js -->
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.10.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
 
-  <script src="CC.js"></script>
+  <script src = "CC.js"></script>
 </body>
 </html>
