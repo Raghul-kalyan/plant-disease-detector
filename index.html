@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Crop Disease Detector</title>
+</head>
+<body>
+  <h1>🌾 Crop Disease Detector</h1>
+
+  <label for="picture">Take a picture using back facing camera:</label>
+
+<input 
+  type="file"
+  id="picture"
+  name="picture"
+  accept="image/*"
+  capture="environment" />
+ 
+  <br><br>
+  <button onclick="predict()">Detect Disease</button>
+
+  <h3 id="result">Result will appear here 🧪</h3>
+
+  <!-- TensorFlow.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.10.0/dist/tf.min.js"></script>
+
+  <script src="CC.js"></script>
+</body>
+</html>
