@@ -46,8 +46,7 @@ I made this App to help farmers detect diseases earlier than manual methods
 
 ## 🌐 Live Demo
 
-(put your GitHub Pages link here)
-
+https://raghul-kalyan.github.io/plant-disease-detector/
 ---
 
 ## ⚠️ Limitations
